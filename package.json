@@ -1,0 +1,41 @@
+{
+  "name": "Allerton",
+  "version": "0.0.1",
+  "description": "Allerton Investments",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "author": "Kaiser Bear",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "body-parser": "^1.14.1",
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.23.6",
+    "connect-flash": "^0.1.1",
+    "del": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "express-ipfilter": "^0.3.1",
+    "express-session": "^1.11.3",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "jquery": "^3.3.1",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.13.12",
+    "node-sass": "^4.8.3",
+    "nodemailer": "^4.6.4",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.5.0",
+    "sendmail": "^1.4.1"
+  },
+  "devDependencies": {
+    "gulp-cli": "^2.0.1",
+    "gulp-watch-sass": "^1.4.1"
+  }
+}
