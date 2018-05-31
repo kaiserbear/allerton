@@ -6311,9 +6311,13 @@ h1 {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  margin-right: 1rem; }
 
 .mailchimp {
   width: 400px;
@@ -6323,20 +6327,22 @@ h1 {
     font-size: 16px;
     margin-bottom: 1rem; }
   .mailchimp input[type="email"] {
-    border-radius: 5px 0 0 5px;
     width: 240px;
     display: inline-block; }
+    .mailchimp input[type="email"]:focus {
+      box-shadow: none;
+      border-bottom: 1px solid #0E233A; }
   .mailchimp button {
     background: #0E233A;
     color: white;
     font-weight: normal;
     border: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
     display: inline-block;
     padding: 7px 0.4rem;
     width: 100px;
     position: relative;
-    left: -5px;
+    left: 0;
     cursor: pointer; }
   .mailchimp .response {
     color: grey;
