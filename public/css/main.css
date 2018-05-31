@@ -6289,14 +6289,18 @@ html, body {
   height: 100%; }
 
 body {
-  background: white; }
+  background: white;
+  padding: 0; }
 
 h1 {
   display: none; }
 
 .main {
-  width: 100%;
-  text-align: center; }
+  text-align: center;
+  height: 100%;
+  overflow-x: hidden;
+  paddign: 0 1rem;
+  max-width: 100%; }
   .main h3 {
     color: #0E233A; }
   .main img {
@@ -6319,10 +6323,23 @@ h1 {
   border-right: 0;
   margin-right: 1rem; }
 
+.details {
+  color: #898989;
+  text-align: center;
+  margin-top: 5rem;
+  position: absolute;
+  bottom: 2rem;
+  width: 100%; }
+  .details p {
+    margin: 0; }
+
+@media (min-width: 768px) {
+  .main {
+    padding: 0; } }
+
 .mailchimp {
   width: 380px;
-  margin: 0 auto;
-  padding: 0 5px; }
+  margin: 0 auto; }
   .mailchimp h3 {
     margin: 0;
     font-size: 16px;
