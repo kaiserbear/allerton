@@ -6298,9 +6298,7 @@ h1 {
 .main {
   text-align: center;
   height: 100%;
-  overflow-x: hidden;
-  paddign: 0 1rem;
-  max-width: 100%; }
+  overflow-x: show; }
   .main h3 {
     color: #0E233A; }
   .main img {
@@ -6328,6 +6326,7 @@ h1 {
   text-align: center;
   margin-top: 5rem;
   position: absolute;
+  z-index: 1;
   bottom: 2rem;
   width: 100%; }
   .details p {
@@ -6339,7 +6338,10 @@ h1 {
 
 .mailchimp {
   width: 380px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: white;
+  z-index: 2;
+  position: relative; }
   .mailchimp h3 {
     margin: 0;
     font-size: 16px;

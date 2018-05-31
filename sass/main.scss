@@ -20,9 +20,9 @@ h1 {
 .main {
     text-align: center;
     height: 100%;
-    overflow-x: hidden;
-    paddign: 0 1rem;
-    max-width: 100%;
+    overflow-x: show;
+    // padding: 0 0.5rem;
+    // max-width: calc(100% - 1rem);
     h3 {
         color: $allertonBlue;
     }
@@ -55,6 +55,7 @@ h1 {
     text-align: center;
     margin-top: 5rem;
     position: absolute;
+    z-index: 1;
     bottom: 2rem;
     width: 100%;
     p {
@@ -71,7 +72,9 @@ h1 {
 .mailchimp {
     width: 380px;
     margin: 0 auto;
-
+    background: white;
+    z-index: 2;
+    position: relative;
 
     h3 {
     	margin: 0;
