@@ -24,6 +24,7 @@
     "gulp": "^4.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
+    "hoek": "^5.0.3",
     "jquery": "^3.3.1",
     "method-override": "^2.3.5",
     "mongoose": "^4.13.12",
@@ -32,10 +33,10 @@
     "passport": "^0.3.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.5.0",
+    "popper.js": "^1.14.3",
     "sendmail": "^1.4.1"
   },
   "devDependencies": {
-    "gulp-cli": "^2.0.1",
-    "gulp-watch-sass": "^1.4.1"
+    "gulp-cli": "^2.0.1"
   }
 }
