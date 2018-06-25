@@ -1,0 +1,22 @@
+<% include full-partials/header %>
+<section class="main">
+	<h1>Allerton Group</h1>
+	<img src="/img/allerton-investments-logo.png" alt="Allerton Investments">
+	<div class="container">
+		<div class="row">
+			INDEX
+		</div>
+	</div>
+	<div class="row">
+	    <% jobs.reverse().slice(-9).forEach(function(job){ %>
+	        <div class="col-sm-6 col-md-4 role">
+	          <h3><%= job.title %></h3>
+	          <p><%- job.description %></p>
+	              <div class="image">
+	                  <img src="https://allerton.s3.amazonaws.com/<%= job.image1 %>">
+	              </div>
+	        </div>
+	    <% }); %>
+	</div>
+</section>
+<% include full-partials/footer %>

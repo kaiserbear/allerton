@@ -1,0 +1,43 @@
+<% include ../plain-partials/header %>
+<section>
+<div class="container">
+    <h3>Create A News Item</h3>
+    <form action="/news" method="POST">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="title" placeholder="Job Title">
+                </div>
+                <div class="image-upload" class="form-group">
+                    <label for="image1">Select a main image</label>
+                    <input type="file" class="form-control" accept=".jpg,.png" id="image1" name="image1" placeholder="Upload Main Image">
+                    <progress class="custom-progress" value="0"></progress>
+                </div>
+                <div class="image-upload" class="form-group">
+                    <label for="image2">Select a body image</label>
+                    <input type="file" class="form-control" accept=".jpg,.png" id="image2" name="image2" placeholder="Upload Body Image 1">
+                    <progress class="custom-progress" value="0"></progress>
+                </div>
+                <div class="image-upload" class="form-group">
+                    <label for="image3">Select a second body image</label>
+                    <input type="file" class="form-control" accept=".jpg,.png" id="image3" name="image3" placeholder="Upload Body Image 2">
+                    <progress class="custom-progress" value="0"></progress>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+             <div class="col-12">
+                <div class="form-group">
+                    <textarea class="form-control froala" type="text" name="description" placeholder="Description">
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Create News Item</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</section>
+<% include ../plain-partials/footer %>
