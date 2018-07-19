@@ -14,7 +14,6 @@ function getAllJobs(string, res) {
         if (err) {
             console.log(err);
         } else {
-            console.log(alljobs);
             res.render(string, {
                 jobs: alljobs
             });
@@ -128,9 +127,11 @@ router.get("/:id/edit", middleware.checkNOwnership, function(req, res) {
 router.put("/:id", middleware.checkNOwnership, function(req, res) {
 
     // find and update the correct job
-    req.body.job.image1 = req.body.job.image1.replace(/[/\\?%*:|"<>^ ]/g, '-');
-    req.body.job.image2 = req.body.job.image2.replace(/[/\\?%*:|"<>^ ]/g, '-');
-    req.body.job.image3 = req.body.job.image3.replace(/[/\\?%*:|"<>^ ]/g, '-');
+    if (req.body.job.image1) {
+        req.body.job.image1 = req.body.job.image1.replace(/[/\\?%*:|"<>^ ]/g, '-');
+    }
+
+    console.log(req.body.job.image1);
 
     job.findByIdAndUpdate(req.params.id, req.body.job, function(err, updatedjob) {
         if (err) {
@@ -145,9 +146,10 @@ router.put("/:id", middleware.checkNOwnership, function(req, res) {
 router.delete("/:id", middleware.checkNOwnership, function(req, res) {
     job.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
-            res.redirect("/news");
+            res.redirect("/");
         } else {
-            res.redirect("/news");
+            res.redirect("/");
+            req.flash("success", "News Item Deleted");
         }
     });
 });

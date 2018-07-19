@@ -10,7 +10,8 @@ html, body {
 body {
     background: white;
     padding: 0;
-    font-family: "Raleway", helvetica,
+    font-family: "Roboto", helvetica;
+    color: #272727;
 }
 
 nav {
@@ -20,21 +21,132 @@ nav {
     }
 }
 
+.logo {
+    width: 75px;
+    max-height: 40px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    img {
+        width: 75px;
+    }
+}
+
+.navbar {
+    .dropdown-menu {
+        a {
+            color: black;
+        }
+    }
+}
+
+.news-items {
+    img {
+        width: 100%;
+    }
+}
+
+.navbar {
+    background-color: $blue;
+
+    a {
+        color: white;
+        font-weight: 300;
+    }
+
+    .nav-item {
+        margin-right: 20px;
+    }
+}
+
 .preview-image {
     max-width: 300px;
+    margin-top: 1rem;
+}
+
+.main {
+    position: relative;
+    padding: 0;
+
+    video {
+        width: 100%;
+    }
+
+    h3 {
+        color: $blue;
+    }
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        height: 100%;
+
+        img {
+            width: 30%;
+            top: 25%;
+            position: relative;
+        }
+    }
 }
 
 section {
-    padding: 2rem;
+    padding: 6rem 2rem;
     color: #272727;
     position: relative;
-    p, li, span, textarea {
-        font-weight: 300;
-        line-height: 34px;
+
+    .col-sm-12 {
+        margin-bottom: 2rem;
     }
-    b {
-        span {
-            font-weight: bold;
+
+    .container {
+        p, li, span, textarea {
+            font-weight: 300;
+            line-height: 34px;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        b {
+            span {
+                font-weight: bold;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 1.5rem;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &.locations {
+        padding: 0 2rem 3rem;
+        background: #e6e4d9;
+
+        .row {
+            div {
+                &:first-of-type {
+                    margin-top: 6rem;
+                }
+            }
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .map {
+            border-top: 1px solid #c5c3b8;
         }
     }
 }
@@ -42,11 +154,13 @@ section {
 .hero {
     padding: 0;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     height: 350px;
+
     h1 {
         display: none;
     }
+
     h2 {
         color: white;
         font-size: 2rem;
@@ -54,6 +168,7 @@ section {
         top: 45%;
         z-index: 2;
     }
+
     img {
         width: 150%;
         margin: 0;
@@ -62,11 +177,13 @@ section {
         left: -25%;
         z-index: 1;
     }
+
     .intro-caption {
         position: relative;
         top: 55%;
         z-index: 3;
     }
+
     &.job-heading {
         h2 {
             bottom: 0;
@@ -80,43 +197,130 @@ section {
     }
 }
 
+.company {
+    background: #ededed;
+
+    .image {
+        position: relative;
+        width: 100%;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 4px solid $blue;
+
+        .company-logo {
+            max-height: 45px;
+            overflow: hidden;
+            position: absolute;
+            bottom: 2.5rem;
+            left: 3%;
+            width: 75px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .cta {
+        width: 100%;
+        display: flex;
+
+        a {
+            background: $blue;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+    }
+
+    .row {
+        &:first-of-type {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+.news-items {
+    background: #115a80;
+    color: white;
+
+    a {
+        color: white;
+    }
+}
 
 .custom-progress {
     width: 100%;
     display: none;
 }
 
-
 .center {
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .navbar-nav {
     margin-left: auto;
+
     &.navbar-right {
         li {
             padding: 10px 0;
         }
+
         img {
             max-width: 50px;
             border-radius: 100%;
             float: left;
         }
+
         a {
-            float:left;
+            float: left;
+        }
+    }
+}
+
+section {
+    .container {
+        .fr-view {
+            p {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+
+
+.contact-us {
+    background: $yellow;
+    color: black;
+    .container {
+        h2 {
+            text-align: left;
+        }
+        hr {
+             border-top: none;
         }
     }
 }
 
 footer {
-    background: #312e2f;
+    background: #484848;
     position: relative;
     z-index: 20;
+
     section {
         color: white;
+
         a {
             color: white;
         }
+
         .col-md-3 {
             &:first-child {
                 ul {
@@ -124,15 +328,17 @@ footer {
                 }
             }
         }
+
         ul {
             list-style: none;
             border-top: 1px solid grey;
             padding: 2rem 0;
+
             li {
                 margin-bottom: 0.5rem;
             }
         }
-    } 
+    }
 
     .mail-chimp {
         input {
@@ -140,33 +346,32 @@ footer {
                 border-radius: 5px 0 0 5px;
                 width: 83%;
                 display: inline-block;
+                margin: 0;
             }
         }
+
         button {
-            background:$blue;
+            background: $yellow;
             color: white;
             font-weight: bold;
             border: none;
             border-radius: 0 5px 5px 0;
             display: inline-block;
             padding: 1px 0.4rem;
-            border: 1px solid $blue;
+            border-bottom: 1px solid $yellow;
             width: 15%;
             position: relative;
             left: -5px;
             cursor: pointer;
         }
+
         .response {
             color: grey;
             font-size: 12px;
         }
     }
-
 }
 
-body {
-
-}
 
 h1 {
     display: none;
@@ -184,37 +389,28 @@ h1 {
     &.sticky {
         position: fixed;
         top: 0;
-        width: 100%
+        width: 100%;
+        z-index: 20;
     }
 }
 
 .navbar-nav {
     margin-left: auto;
+
     &.navbar-right {
         li {
             padding: 10px 0;
         }
+
         img {
             max-width: 50px;
             border-radius: 100%;
             float: left;
         }
+
         a {
-            float:left;
+            float: left;
         }
-    }
-}
-
-.main {
-    text-align: center;
-    height: 100%;
-    overflow-x: show;
-    h3 {
-        color: $blue;
-    }
-
-    img {
-        width: 300px;
     }
 }
 
@@ -241,50 +437,39 @@ h1 {
     border: 1px solid $blue;
 }
 
-.mailchimp {
-    width: 380px;
-    margin: 0 auto;
-    background: white;
-    z-index: 2;
+
+.user-controls {
+    z-index: 10;
     position: relative;
+}
 
-    h3 {
-    	margin: 0;
-    	font-size: 16px;
-    	margin-bottom: 1rem;
-    }
-
-    input[type="email"] {
-        width: 70%;
-        display: inline-block;
-        &:focus {
-            box-shadow: none;
-            border-bottom: 1px solid $blue;
-        }
-    }
-
-    button {
-        background: #0E233A;
-        color: white;
-        font-weight: normal;
-        border: none;
-        border-radius: 5px;
-        display: inline-block;
-        padding: 7px 0.4rem;
-        width: 20%;
-        position: relative;
-        left: 0;
-        cursor: pointer;
-    }
-
-    .response {
-        color: grey;
-        font-size: 12px;
-    }
+.admin {
+    padding: 1rem;
 }
 
 @include media-breakpoint-up(md) {
     .main {
         padding: 0;
+    }
+    section {
+        .container {
+            p {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+   
+}
+
+
+@include media-breakpoint-up(lg) {
+    section {
+     
+
+        &.locations {
+            .map {
+                border-top: none;
+            }
+        }
     }
 }

@@ -10,7 +10,6 @@ function getAllJobs(string, res) {
        if(err){
            console.log(err);
        } else {
-          console.log(alljobs);
           res.render(string,{
             jobs:alljobs
           });
@@ -56,14 +55,16 @@ router.post("/login", passport.authenticate("local", {
         successRedirect: "/",
         failureRedirect: "/login"
     }), function(req, res) {
-});
+    req.flash("success", "Hey there!");
+  });
+
 
 
 // logout route
 router.get("/logout", function(req, res){
    req.logout();
    req.flash("success", "Logged you out!");
-   res.redirect("/jobs");
+   res.redirect("/");
 });
 
 module.exports = router;

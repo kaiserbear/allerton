@@ -1,22 +1,162 @@
 <% include full-partials/header %>
 <section class="main">
 	<h1>Allerton Group</h1>
-	<img src="/img/allerton-investments-logo.png" alt="Allerton Investments">
-	<div class="container">
-		<div class="row">
-			INDEX
-		</div>
-	</div>
-	<div class="row">
-	    <% jobs.reverse().slice(-9).forEach(function(job){ %>
-	        <div class="col-sm-6 col-md-4 role">
-	          <h3><%= job.title %></h3>
-	          <p><%- job.description %></p>
-	              <div class="image">
-	                  <img src="https://allerton.s3.amazonaws.com/<%= job.image1 %>">
-	              </div>
-	        </div>
-	    <% }); %>
+	<video id="homeVideo" controls autoplay loop muted>
+	  <source src="https://allerton.s3.amazonaws.com/video-example.mp4" type="video/mp4" controls="false">
+	  <!-- <source src="movie.ogg" type="video/ogg"> -->
+	  Your browser does not support the video tag.
+	</video>
+	<div class="overlay">
+		<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
 	</div>
 </section>
+<section>
+	<div class="container">
+		<div class="row">
+			<h2>About Us</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+		</div>
+	</div>
+</section>
+<section id="companies" class="company">
+	<div class="container">
+		<h2>Companies</h2>
+		<div class="row">
+			<div class="col-sm-12 col-md-4">
+				<div class="image">
+					<img src="https://allerton.s3.amazonaws.com/companies/investments.jpeg" />
+					<div class="company-logo">
+						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
+					</div>
+				</div>
+				<h3>Allerton Investments</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis.</p>
+				<div class="cta">
+					<a href="/companies/investments">View more</a>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4">
+				<div class="image">
+					<img src="https://allerton.s3.amazonaws.com/companies/care.jpeg" />
+					<div class="company-logo">
+						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
+					</div>
+				</div>
+				<h3>Allerton Care Provider</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis.</p>
+				<div class="cta">
+					<a href="/companies/care">View more</a>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4">
+				<div class="image">
+					<img src="https://allerton.s3.amazonaws.com/companies/houses.jpeg" />
+					<div class="company-logo">
+						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
+					</div>
+				</div>
+				<h3>Allerton Housing</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis.</p>
+				<div class="cta">
+					<a href="/companies/housing">View more</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-4">
+				<div class="image">
+					<img src="https://allerton.s3.amazonaws.com/companies/property.jpeg" />
+					<div class="company-logo">
+						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
+					</div>
+				</div>
+				<h3>Allerton Developments</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis.</p>
+				<div class="cta">
+					<a href="/companies/developments">View more</a>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4">
+				<div class="image">
+					<img src="https://allerton.s3.amazonaws.com/companies/maintenance.jpeg" />
+					<div class="company-logo">
+						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
+					</div>
+				</div>
+				<h3>Allerton Maintenance</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis.</p>
+				<div class="cta">
+					<a href="/companies/maintenance">View more</a>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4">
+				<div class="image">
+					<img src="https://allerton.s3.amazonaws.com/companies/cars.jpeg" />
+					<div class="company-logo">
+						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
+					</div>
+				</div>
+				<h3>Allerton Transport</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis.</p>
+				<div class="cta">
+					<a href="/companies/transport">View more</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="news" class="news-items">
+	<div class="container">
+		<h2>News</h2>
+		<div class="row">
+	    <% jobs.reverse().slice(-9).forEach(function(job){ %>
+	        <div class="col-sm-12 col-md-3 role">
+	        	<a href="/news/<%= job._id %>">
+		        	<div class="image">
+		                  <img src="https://allerton.s3.amazonaws.com/<%= job.image1 %>">
+		             </div>
+		          	<h3><%= job.title %></h3>
+		          	<p><%- job.description %></p>
+		         </a>
+	        </div>
+	    <% }); %>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<h2>Corporate Responsibility</h2>
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-3">
+				<img src="https://allerton.s3.amazonaws.com/corporate-environ/corp-1.jpeg" />
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-9">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-6 order-md-2 col-lg-3">
+				<img src="https://allerton.s3.amazonaws.com/corporate-environ/corp-2.jpeg" />
+			</div>
+			<div class="col-sm-12 col-md-6 order-md-1 col-lg-9">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="locations">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-6">
+				<h2>Where We Operate</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel luctus est. Nullam rhoncus consectetur sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus elit non metus vulputate dictum a aliquet est. Ut malesuada porta dolor eu lobortis. Vestibulum ante.</p>
+			</div>
+			<div class="col-md-12 col-lg-6 map">
+				<img src="https://allerton.s3.amazonaws.com/locations/operate-map.jpg" />
+			</div>
+		</div>
+	</div>
+</section>
+<% include full-partials/contact %>
 <% include full-partials/footer %>

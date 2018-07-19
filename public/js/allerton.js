@@ -1,6 +1,7 @@
 const navBar = document.getElementById("navbar");
 const fakeNav = document.getElementById("fake-nav");
 const footer = document.getElementById("footer");
+const video = document.getElementById("homeVideo");
 const navHeight = 56;
 
 function navScroll() {
@@ -16,8 +17,19 @@ function navScroll() {
     }
 }
 
+function hideVideoControls() {
+    if (video) {
+        video.controls = false;
+    }
+}
+
+hideVideoControls();
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {
     navScroll();
 };
+
+$('.close-alert').click(function() {
+    $(this).parents(':eq(1)').remove();
+});

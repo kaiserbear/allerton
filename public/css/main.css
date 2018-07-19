@@ -6288,24 +6288,87 @@ html, body {
 body {
   background: white;
   padding: 0;
-  font-family: "Raleway", helvetica; }
+  font-family: "Roboto", helvetica;
+  color: #272727; }
 
 nav svg {
   width: 240px;
   height: 20px; }
 
+.logo {
+  width: 75px;
+  max-height: 40px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0; }
+  .logo img {
+    width: 75px; }
+
+.navbar .dropdown-menu a {
+  color: black; }
+
+.news-items img {
+  width: 100%; }
+
+.navbar {
+  background-color: #0E233A; }
+  .navbar a {
+    color: white;
+    font-weight: 300; }
+  .navbar .nav-item {
+    margin-right: 20px; }
+
 .preview-image {
-  max-width: 300px; }
+  max-width: 300px;
+  margin-top: 1rem; }
+
+.main {
+  position: relative;
+  padding: 0; }
+  .main video {
+    width: 100%; }
+  .main h3 {
+    color: #0E233A; }
+  .main .overlay {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    height: 100%; }
+    .main .overlay img {
+      width: 30%;
+      top: 25%;
+      position: relative; }
 
 section {
-  padding: 2rem;
+  padding: 6rem 2rem;
   color: #272727;
   position: relative; }
-  section p, section li, section span, section textarea {
+  section .col-sm-12 {
+    margin-bottom: 2rem; }
+  section .container p, section .container li, section .container span, section .container textarea {
     font-weight: 300;
     line-height: 34px; }
-  section b span {
+  section .container p {
+    margin-bottom: 2rem; }
+  section .container b span {
     font-weight: bold; }
+  section .container h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+    width: 100%; }
+  section .container img {
+    width: 100%; }
+  section.locations {
+    padding: 0 2rem 3rem;
+    background: #e6e4d9; }
+    section.locations .row div:first-of-type {
+      margin-top: 6rem; }
+    section.locations h2 {
+      text-align: left; }
+    section.locations .map {
+      border-top: 1px solid #c5c3b8; }
 
 .hero {
   padding: 0;
@@ -6340,6 +6403,45 @@ section {
     margin-left: 15px;
     position: absolute; }
 
+.company {
+  background: #ededed; }
+  .company .image {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 4px solid #0E233A; }
+    .company .image .company-logo {
+      max-height: 45px;
+      overflow: hidden;
+      position: absolute;
+      bottom: 2.5rem;
+      left: 3%;
+      width: 75px; }
+    .company .image img {
+      width: 100%; }
+  .company h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem; }
+  .company .cta {
+    width: 100%;
+    display: flex; }
+    .company .cta a {
+      background: #0E233A;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 0 auto; }
+  .company .row:first-of-type {
+    margin-bottom: 4rem; }
+
+.news-items {
+  background: #115a80;
+  color: white; }
+  .news-items a {
+    color: white; }
+
 .custom-progress {
   width: 100%;
   display: none; }
@@ -6358,8 +6460,19 @@ section {
   .navbar-nav.navbar-right a {
     float: left; }
 
+section .container .fr-view p {
+  margin-bottom: 0.5rem; }
+
+.contact-us {
+  background: #F1C52E;
+  color: black; }
+  .contact-us .container h2 {
+    text-align: left; }
+  .contact-us .container hr {
+    border-top: none; }
+
 footer {
-  background: #312e2f;
+  background: #484848;
   position: relative;
   z-index: 20; }
   footer section {
@@ -6377,16 +6490,17 @@ footer {
   footer .mail-chimp input[type="email"] {
     border-radius: 5px 0 0 5px;
     width: 83%;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
   footer .mail-chimp button {
-    background: #0E233A;
+    background: #F1C52E;
     color: white;
     font-weight: bold;
     border: none;
     border-radius: 0 5px 5px 0;
     display: inline-block;
     padding: 1px 0.4rem;
-    border: 1px solid #0E233A;
+    border-bottom: 1px solid #F1C52E;
     width: 15%;
     position: relative;
     left: -5px;
@@ -6421,15 +6535,6 @@ h1 {
   .navbar-nav.navbar-right a {
     float: left; }
 
-.main {
-  text-align: center;
-  height: 100%;
-  overflow-x: show; }
-  .main h3 {
-    color: #0E233A; }
-  .main img {
-    width: 300px; }
-
 .form-control {
   display: block;
   width: 100%;
@@ -6451,38 +6556,19 @@ h1 {
   background: #0E233A;
   border: 1px solid #0E233A; }
 
-.mailchimp {
-  width: 380px;
-  margin: 0 auto;
-  background: white;
-  z-index: 2;
+.user-controls {
+  z-index: 10;
   position: relative; }
-  .mailchimp h3 {
-    margin: 0;
-    font-size: 16px;
-    margin-bottom: 1rem; }
-  .mailchimp input[type="email"] {
-    width: 70%;
-    display: inline-block; }
-    .mailchimp input[type="email"]:focus {
-      box-shadow: none;
-      border-bottom: 1px solid #0E233A; }
-  .mailchimp button {
-    background: #0E233A;
-    color: white;
-    font-weight: normal;
-    border: none;
-    border-radius: 5px;
-    display: inline-block;
-    padding: 7px 0.4rem;
-    width: 20%;
-    position: relative;
-    left: 0;
-    cursor: pointer; }
-  .mailchimp .response {
-    color: grey;
-    font-size: 12px; }
+
+.admin {
+  padding: 1rem; }
 
 @media (min-width: 768px) {
   .main {
-    padding: 0; } }
+    padding: 0; }
+  section .container p {
+    margin-bottom: 4rem; } }
+
+@media (min-width: 992px) {
+  section.locations .map {
+    border-top: none; } }

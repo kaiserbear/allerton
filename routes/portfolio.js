@@ -3,6 +3,7 @@ const app = express();
 const aws = require('aws-sdk');
 const router = express.Router();
 const portfolios = require("../models/portfolio");
+const job = require("../models/news");
 const middleware = require("../middleware");
 const passport = require("passport");
 const cors = require("cors");
@@ -28,17 +29,17 @@ function getAllJobs(string, res) {
 
 //INDEX - show all portfolios
 router.get("/", function(req, res) {
-    console.log('check');
-    portfolios.find({}, function(err, allportfolios) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render("portfolio/index", {
-                portfolios: allportfolios,
-                user: req.user
-            });
-        }
 
+    portfolios.find()
+        .then(portfolios => {
+      job.find()
+
+        .then(news => {
+          res.render('portfolio/index', {
+            portfolios: portfolios,
+            jobs: news
+          });
+        })
     });
 
 });
@@ -66,8 +67,7 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
     }
 
     // Create a new portfolio and save to DB
-    portfolio.create(newPortfolio, function(err, newlyCreated) {
-
+    portfolios.create(newPortfolio, function(err, newlyCreated) {
         if (err) {
             console.log(err);
         } else {
@@ -116,27 +116,23 @@ router.get('/sign-s3', (req, res) => {
 
 // SHOW - shows more info about one portfolio
 router.get("/:id", function(req, res) {
-    portfolios.find({}, function(err, allportfolios) {
-        if (err) {
-            console.log(err);
-        } else {
-            portfolios.findById(req.params.id).exec(function(err, foundportfolio) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    res.render("portfolio/show", {
-                        portfolio: foundportfolio,
-                        portfolios: allportfolios
-                    });
-                }
-            });
-        }
+     portfolios.find()
+        .then(portfolios => {
+      job.find()
+
+        .then(news => {
+          res.render('portfolio/index', {
+            portfolios: portfolios,
+            jobs: news
+          });
+        })
     });
 });
 
 
 // EDIT portfolio ROUTE
 router.get("/:id/edit", middleware.checkPOwnership, function(req, res) {
+
     portfolios.findById(req.params.id, function(err, foundportfolio) {
         res.render("portfolio/edit", {
             portfolio: foundportfolio
@@ -163,6 +159,7 @@ router.put("/:id", middleware.checkPOwnership, function(req, res) {
 router.delete("/:id", middleware.checkPOwnership, function(req, res) {
     portfolios.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
+            console.log(err);
             res.redirect("/portfolio");
         } else {
             res.redirect("/portfolio");

@@ -1,45 +1,23 @@
-<% include ../partials/header %>
-<section>
+<% include ../plain-partials/header %>
+<section class="admin">
     <div class="container">
         <h3>Edit "<%= job.title %>"</h3>
 
-        <form action="/jobs/<%= job._id %>?_method=PUT" method="POST">
+        <form action="/news/<%= job._id %>?_method=PUT" method="POST">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 offset-3">
                     <div class="form-group">
-                        <input class="form-control" type="text" name="job[title]" value="<%= job.title %>">
+                        <input class="form-control" type="text" name="job[title]" value="<%= job.title %>" required>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control"  name="job[image]" placeholder="Pexels Link"><span class="info" data-toggle="tooltip" data-placement="top" title="We need to phase this out. Download the image and upload it again using the control below.">
-                          <i class="fas fa-info-circle"></i>
-                        </span>
-                        <% if (job.image) { %>
-                        <img id="preview-image" src="<%= job.image %>" />
-                        <% } %>
-                    </div>
-                    <div id="image-upload" class="form-group">
-                        <input type="file" class="form-control" accept=".jpg,.png" id="file-input" name="job[amazon]" placeholder="Upload Image">
+                    <div class="image-upload" class="form-group">
+                        <input type="file" class="form-control" accept=".jpg,.png" value="<%= job.image1 %>" name="job[image1]" placeholder="Upload Image">
+                        <progress class="custom-progress" value="0"></progress>
                         <span class="info" data-toggle="tooltip" data-placement="top" title="Make sure the image has the right dimensions - 1920x1276, or equivalent/similar ratio.">
                           <i class="fas fa-info-circle"></i>
                         </span>
-                        <progress id="progress" value="0"></progress>
-                         <% if (job.amazon) { %>
-                            <img id="preview-image" src="https://spencerscott.s3.amazonaws.com/<%= job.amazon %>" />
+                         <% if (job.image1) { %>
+                            <img class="preview-image" src="https://allerton.s3.amazonaws.com/<%= job.image1 %>" />
                         <% } %>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="job[role]" value="<%= job.role %>">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="job[location]" value="<%= job.location %>">
-                    </div>
-                   <div class="form-group">
-                        <input class="form-control" type="text" name="job[term]" value="<%= job.term %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="job[price]" value="<%= job.price %>">
                     </div>
                 </div>
             </div>
@@ -58,13 +36,4 @@
 </section>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="/js/ss.js"></script>
-<script src="/js/createJob.js"></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.6/js/froala_editor.min.js'></script>
-
-</body>
-
-</html>
+<% include ../plain-partials/footer %>

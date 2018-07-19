@@ -1,23 +1,65 @@
-    <footer id="footer">
-    	<!-- // TODO -->
-    	<form action="https://kaiserbear.us18.list-manage.com/subscribe/post?u=f2250fce2df00b1045220624c&amp;id=d2a6fe6491" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-			<div class="form-group">
-				<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="john.smith@example.com">
-				<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Submit</button>
-			</div>
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-				<div style="position: absolute; left: -5000px;" aria-hidden="true">
-					<input type="text" name="b_f2250fce2df00b1045220624c_d2a6fe6491" tabindex="-1" value="">
+<footer id="footer">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul>
+						<li><h5>About Allerton Group</h5></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/join">Join Us</a></li>
+						<li><a href="/privacy-policy">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul>
+						<li><h5>Community</h5></li>
+						<li><a href="#" target="_blank">Twitter</a></li>
+						<li><a href="#" target="_blank">Instagram</a></li>
+						<li><a href="#" target="_blank">LinkedIn</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul>
+						<li><h5>Latest News</h5></li>
+						<% jobs.slice(-6).reverse().forEach(function(job){ %>
+						<li><a href="/news/<%= job._id %>"><%= job.title %></a></li>
+						<% }); %>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul>
+						<li><h5>Subscribe</h5></li>
+						<li>
+							<div id="mc_embed_signup" class="mail-chimp">
+								<form action="https://kaiserbear.us18.list-manage.com/subscribe/post?u=f2250fce2df00b1045220624c&amp;id=d2a6fe6491" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+									<div class="form-group">
+										<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="john.smith@example.com">
+										<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Go</button>
+									</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+										<div style="position: absolute; left: -5000px;" aria-hidden="true">
+											<input type="text" name="b_f2250fce2df00b1045220624c_d2a6fe6491" tabindex="-1" value="">
+										</div>
+									</div>
+								</form>
+							</div>
+						</li>
+						<li>&copy; Allerton Group 2018</li>
+					</ul>
 				</div>
 			</div>
-		</form>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-	<script src="/js/allerton.js"></script>
-    </body>
+			<div class="row">
+				<a href="https://www.instagram.com/kaiserbear" class="center kb" target="_blank"><img src="/img/kb.png" alt="Website designed by Kaiser Bear" /></a>
+			</div>
+		</div>
+	</section>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script src="/js/allerton.js"></script>
+</body>
 </html>
