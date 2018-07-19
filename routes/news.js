@@ -31,18 +31,16 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
         username: req.user.username
     }
     req.body.image1 = req.body.image1.replace(/[/\\?%*:|"<>^ ]/g, '-');
-    req.body.image2 = req.body.image2.replace(/[/\\?%*:|"<>^ ]/g, '-');
-    req.body.image3 = req.body.image3.replace(/[/\\?%*:|"<>^ ]/g, '-');
+    // req.body.image2 = req.body.image2.replace(/[/\\?%*:|"<>^ ]/g, '-');
+    // req.body.image3 = req.body.image3.replace(/[/\\?%*:|"<>^ ]/g, '-');
 
     var image1 = req.body.image1;
-    var image2 = req.body.image2;
-    var image3 = req.body.image3;
+    // var image2 = req.body.image2;
+    // var image3 = req.body.image3;
 
     var newjob = {
         title: title,
         image1: image1,
-        image2: image2,
-        image3: image3,
         description: desc,
         author: author
     }
