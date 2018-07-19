@@ -6317,6 +6317,8 @@ nav svg {
     font-weight: 300; }
   .navbar .nav-item {
     margin-right: 20px; }
+    .navbar .nav-item .nav-link {
+      color: white; }
 
 .preview-image {
   max-width: 300px;
@@ -6324,7 +6326,7 @@ nav svg {
 
 .main {
   position: relative;
-  padding: 0; }
+  padding: 2rem; }
   .main video {
     width: 100%; }
   .main h3 {
@@ -6344,6 +6346,30 @@ section {
   padding: 6rem 2rem;
   color: #272727;
   position: relative; }
+  section.about-us .image {
+    margin-bottom: 1rem; }
+  section.portfolios, section.news-items {
+    padding: 4rem 0; }
+    section.portfolios .role img, section.news-items .role img {
+      margin-bottom: 1.5rem; }
+    section.portfolios .role h3, section.news-items .role h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem; }
+    section.portfolios .role p, section.news-items .role p {
+      margin-bottom: 1rem; }
+    section.portfolios .role .user-controls, section.news-items .role .user-controls {
+      margin-bottom: 2rem; }
+  section.news-items img {
+    min-height: 175px; }
+  section.news-items .cta {
+    width: 100%;
+    display: flex; }
+    section.news-items .cta a {
+      background: white;
+      color: #0E233A;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 0 auto; }
   section .col-sm-12 {
     margin-bottom: 2rem; }
   section .container p, section .container li, section .container span, section .container textarea {
@@ -6358,6 +6384,10 @@ section {
     margin-bottom: 4rem;
     font-size: 1.5rem;
     width: 100%; }
+  section .container h3 {
+    margin-bottom: 4rem; }
+  section .container h5 {
+    margin-bottom: 1rem; }
   section .container img {
     width: 100%; }
   section.locations {
@@ -6384,11 +6414,10 @@ section {
     top: 45%;
     z-index: 2; }
   .hero img {
-    width: 150%;
+    width: 100%;
     margin: 0;
     position: absolute;
     top: -10%;
-    left: -25%;
     z-index: 1; }
   .hero .intro-caption {
     position: relative;
@@ -6405,6 +6434,8 @@ section {
 
 .company {
   background: #ededed; }
+  .company .container h3 {
+    margin-bottom: 2rem; }
   .company .image {
     position: relative;
     width: 100%;
@@ -6463,13 +6494,26 @@ section {
 section .container .fr-view p {
   margin-bottom: 0.5rem; }
 
+.news-heading {
+  position: relative; }
+  .news-heading h2 {
+    text-align: left;
+    font-size: 3rem;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    top: 0; }
+
 .contact-us {
   background: #F1C52E;
   color: black; }
   .contact-us .container h2 {
-    text-align: left; }
+    text-align: left;
+    font-size: 3rem; }
   .contact-us .container hr {
     border-top: none; }
+  .contact-us img {
+    border: 10px solid #dcb52d; }
 
 footer {
   background: #484848;
@@ -6479,14 +6523,14 @@ footer {
     color: white; }
     footer section a {
       color: white; }
-    footer section .col-md-3:first-child ul {
-      border-top: none; }
     footer section ul {
       list-style: none;
       border-top: 1px solid grey;
       padding: 2rem 0; }
       footer section ul li {
         margin-bottom: 0.5rem; }
+        footer section ul li a:hover {
+          color: #F1C52E; }
   footer .mail-chimp input[type="email"] {
     border-radius: 5px 0 0 5px;
     width: 83%;
@@ -6522,7 +6566,8 @@ h1 {
   .navbar.sticky {
     position: fixed;
     top: 0;
-    width: 100%; }
+    width: 100%;
+    z-index: 20; }
 
 .navbar-nav {
   margin-left: auto; }
@@ -6558,7 +6603,10 @@ h1 {
 
 .user-controls {
   z-index: 10;
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
+  .user-controls form {
+    display: inline-block; }
 
 .admin {
   padding: 1rem; }
@@ -6570,5 +6618,9 @@ h1 {
     margin-bottom: 4rem; } }
 
 @media (min-width: 992px) {
+  .contact-us .container h3 {
+    font-size: 2.5rem; }
+  .contact-us .container h4 {
+    font-size: 2.5rem; }
   section.locations .map {
     border-top: none; } }

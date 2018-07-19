@@ -11,7 +11,7 @@
     </head>
     <body>
     <div id="fake-nav"></div>
-        <nav id="navbar" class="navbar navbar-expand-lg">
+        <nav id="navbar" class="navbar navbar-dark navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand logo" href="/">
                     <img src="/img/ai-logo-white.png" alt="Allerton Investments">
@@ -24,8 +24,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/about-us">About Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/#companies">Companies</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Companies</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/companies/investments">Allerton Investments</a>
+                                <a class="dropdown-item" href="/companies/care">Allerton Care</a>
+                                <a class="dropdown-item" href="/companies/housing">Allerton Housing</a>
+                                <a class="dropdown-item" href="/companies/developments">Allerton Developments</a>
+                                <a class="dropdown-item" href="/companies/maintenance">Allerton Maintenance</a>
+                                <a class="dropdown-item" href="/companies/transport">Allerton Transport</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/#news">News</a>

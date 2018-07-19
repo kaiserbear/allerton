@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-4">
 				<div class="image">
-					<img src="https://allerton.s3.amazonaws.com/companies/investments.jpeg" />
+					<img src="https://allerton.s3.amazonaws.com/companies/investments-small.jpeg" />
 					<div class="company-logo">
 						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
 					</div>
@@ -38,7 +38,7 @@
 			</div>
 			<div class="col-sm-12 col-md-4">
 				<div class="image">
-					<img src="https://allerton.s3.amazonaws.com/companies/care.jpeg" />
+					<img src="https://allerton.s3.amazonaws.com/companies/care-small.jpeg" />
 					<div class="company-logo">
 						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
 					</div>
@@ -51,7 +51,7 @@
 			</div>
 			<div class="col-sm-12 col-md-4">
 				<div class="image">
-					<img src="https://allerton.s3.amazonaws.com/companies/houses.jpeg" />
+					<img src="https://allerton.s3.amazonaws.com/companies/housing-small.jpg" />
 					<div class="company-logo">
 						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
 					</div>
@@ -66,7 +66,7 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-4">
 				<div class="image">
-					<img src="https://allerton.s3.amazonaws.com/companies/property.jpeg" />
+					<img src="https://allerton.s3.amazonaws.com/companies/developments-small.jpeg" />
 					<div class="company-logo">
 						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
 					</div>
@@ -79,7 +79,7 @@
 			</div>
 			<div class="col-sm-12 col-md-4">
 				<div class="image">
-					<img src="https://allerton.s3.amazonaws.com/companies/maintenance.jpeg" />
+					<img src="https://allerton.s3.amazonaws.com/companies/maintenance-small.jpeg" />
 					<div class="company-logo">
 						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
 					</div>
@@ -92,7 +92,7 @@
 			</div>
 			<div class="col-sm-12 col-md-4">
 				<div class="image">
-					<img src="https://allerton.s3.amazonaws.com/companies/cars.jpeg" />
+					<img src="https://allerton.s3.amazonaws.com/companies/cars-small.jpg" />
 					<div class="company-logo">
 						<img src="/img/ai-logo-white.png" alt="Allerton Investments" />
 					</div>
@@ -112,13 +112,14 @@
 		<div class="row">
 	    <% jobs.reverse().slice(-9).forEach(function(job){ %>
 	        <div class="col-sm-12 col-md-3 role">
-	        	<a href="/news/<%= job._id %>">
 		        	<div class="image">
 		                  <img src="https://allerton.s3.amazonaws.com/<%= job.image1 %>">
 		             </div>
 		          	<h3><%= job.title %></h3>
-		          	<p><%- job.description %></p>
-		         </a>
+		          	<%- job.description %>
+		          	<div class="cta">
+		          		<a href="/news/<%= job._id %>" clas="btn">View more</a>
+		          	</div>
 	        </div>
 	    <% }); %>
 		</div>

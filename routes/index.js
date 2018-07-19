@@ -23,12 +23,38 @@ router.get("/", function(req, res){
 });
 
 router.get("/about-us", function(req, res){
-    res.render("about-us", res);
+    getAllJobs("about-us", res);
 });
 
 
 router.get("/register", function(req, res){
    res.render("register", res);
+});
+
+//root route
+router.get("/companies/investments", function(req, res){
+    getAllJobs("companies/investments", res);
+});
+
+router.get("/companies/care", function(req, res){
+    getAllJobs("companies/care", res);
+});
+
+
+router.get("/companies/housing", function(req, res){
+    getAllJobs("companies/housing", res);
+});
+
+router.get("/companies/developments", function(req, res){
+    getAllJobs("companies/developments", res);
+});
+
+router.get("/companies/maintenance", function(req, res){
+    getAllJobs("companies/maintenance", res);
+});
+
+router.get("/companies/transport", function(req, res){
+    getAllJobs("companies/transport", res);
 });
 
 

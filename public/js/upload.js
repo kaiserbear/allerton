@@ -91,7 +91,6 @@ function uploadFile(eachUpload, file, signedRequest, url, progress) {
     xhr.send(file);
 }
 
-
 // Text Editor
 
 froalaEditorStandardButtons = [
@@ -109,14 +108,13 @@ froalaEditorStandardButtons = [
         , 'align'
         , 'indent'
         , 'outdent'
-        , 'emoticons'
     ]
 
 // Initiate Froala Editor
 $(function() {
     if ($('.froala').length) {
         $('.froala').froalaEditor({
-            toolbarButtons: ['bold', 'italic', 'underline', '|', 'color', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', '-', 'insertImage', 'insertLink', 'insertTable', '|', 'insertHR', 'selectAll', 'clearFormatting', ],
+            toolbarButtons: froalaEditorStandardButtons,
             quickInsertTags: [''],
             key: '7E4C3B3E3cA5A4B3F2E4C2B2E3C1A2vxC-11hh1lucapA-13abA1tvtC-21ss=='
         });

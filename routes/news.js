@@ -131,8 +131,6 @@ router.put("/:id", middleware.checkNOwnership, function(req, res) {
         req.body.job.image1 = req.body.job.image1.replace(/[/\\?%*:|"<>^ ]/g, '-');
     }
 
-    console.log(req.body.job.image1);
-
     job.findByIdAndUpdate(req.params.id, req.body.job, function(err, updatedjob) {
         if (err) {
             res.redirect("/news");

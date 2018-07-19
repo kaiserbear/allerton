@@ -33,3 +33,8 @@ window.onscroll = function() {
 $('.close-alert').click(function() {
     $(this).parents(':eq(1)').remove();
 });
+
+
+$('.role p').each(function(index, element) {
+    $clamp(element, { clamp: 3, useNativeClamp: false });
+});

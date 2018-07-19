@@ -1,10 +1,8 @@
 <% include ../full-partials/header %>
     <section class="hero news-heading full-width animated fadeIn">
         <img src="https://allerton.s3.amazonaws.com/<%= job.image1 %>" alt="<%=job.title%>">
-
         <div class="container">
             <div class="row">
-                <h2><%=job.title%></h2>
                 <div class="user-controls">
                     <% if (currentUser && job.author.id.equals(currentUser._id)) { %>
                         <a class="btn btn-xs btn-warning" href="/news/<%= job._id %>/edit">Edit</a>
@@ -19,11 +17,15 @@
     <section id="individual-job" class="individual-job">
         <div class="container">
             <div class="row">
-                <p><%- job.description %></p>
+                <h3><%=job.title%></h3>
+                <div class="description">
+                    <%- job.description %>
+                </div>
                 <p>
                     <em>Submitted By <%= job.author.username %></em>
                 </p>
             </div>
         </div>
     </section>
-    <% include ../full-partials/footer %>
+<% include ../full-partials/contact %>
+<% include ../full-partials/footer %>
