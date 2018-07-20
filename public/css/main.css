@@ -6360,7 +6360,7 @@ section {
     section.portfolios .role .user-controls, section.news-items .role .user-controls {
       margin-bottom: 2rem; }
   section.news-items img {
-    min-height: 175px; }
+    height: 175px; }
   section.news-items .cta {
     width: 100%;
     display: flex; }
@@ -6503,6 +6503,9 @@ section .container .fr-view p {
     bottom: 0;
     margin: 0;
     top: 0; }
+  .news-heading .user-controls {
+    position: absolute;
+    bottom: 0; }
 
 .contact-us {
   background: #F1C52E;

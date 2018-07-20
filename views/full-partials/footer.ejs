@@ -22,7 +22,7 @@
 					<ul>
 						<li><h5>Latest News</h5></li>
 						<% jobs.slice(-6).reverse().forEach(function(job){ %>
-						<li><a href="/news/<%= job._id %>"><%= job.title %></a></li>
+							<li><a href="/news/<%= job._id %>"><%= job.title %></a></li>
 						<% }); %>
 					</ul>
 				</div>

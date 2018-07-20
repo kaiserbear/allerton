@@ -27,5 +27,26 @@
             </div>
         </div>
     </section>
+    <section class="news-items">
+        <div class="container">
+            <h2>Other News</h2>
+            <div class="row">
+                <% jobs.slice(-6).reverse().forEach(function(item){ %>
+                    <% if(item.id != job.id) {%>
+                        <div class="col-sm-12 col-md-3 role">
+                            <div class="image">
+                                  <img src="https://allerton.s3.amazonaws.com/<%= item.image1 %>">
+                             </div>
+                            <h3><%= item.title %></h3>
+                            <%- item.description %>
+                            <div class="cta">
+                                <a href="/news/<%= item._id %>" clas="btn">View more</a>
+                            </div>
+                        </div>
+                    <% } %>
+                <% }); %>
+            </div>
+        </div>
+    </section>
 <% include ../full-partials/contact %>
 <% include ../full-partials/footer %>
