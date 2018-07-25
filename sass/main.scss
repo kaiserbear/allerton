@@ -49,7 +49,9 @@ nav {
 
 .navbar {
     background-color: $blue;
-
+    .dropdown-item.active, .dropdown-item:active {
+        background-color: inherit;
+    }
     a {
         color: white;
         font-weight: 300;

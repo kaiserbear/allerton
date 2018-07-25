@@ -6312,6 +6312,8 @@ nav svg {
 
 .navbar {
   background-color: #0E233A; }
+  .navbar .dropdown-item.active, .navbar .dropdown-item:active {
+    background-color: inherit; }
   .navbar a {
     color: white;
     font-weight: 300; }
