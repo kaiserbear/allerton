@@ -61,6 +61,10 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
     getAllJobs("news/new", res);
 });
 
+router.get("/terms-conditions",function(req, res) {
+    getAllJobs("/terms-conditions", res);
+});
+
 
 router.get('/sign-s3', (req, res) => {
 

@@ -107,7 +107,8 @@ froalaEditorStandardButtons = [
         , 'formatUL'
         , 'align'
         , 'indent'
-        , 'outdent'
+        , 'outdent',
+        'insertHR', 'selectAll', 'clearFormatting', '|',  'html', '|', 'undo', 'redo'
     ]
 
 // Initiate Froala Editor

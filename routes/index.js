@@ -26,6 +26,19 @@ router.get("/about-us", function(req, res){
     getAllJobs("about-us", res);
 });
 
+router.get("/privacy-policy",function(req, res) {
+    getAllJobs("privacy-policy", res);
+});
+
+
+router.get("/cookie-policy",function(req, res) {
+    getAllJobs("cookie-policy", res);
+});
+
+router.get("/terms-conditions",function(req, res) {
+    getAllJobs("terms-conditions", res);
+});
+
 
 router.get("/register", function(req, res){
    res.render("register", res);

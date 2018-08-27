@@ -6333,6 +6333,17 @@ nav svg {
     width: 100%; }
   .main h3 {
     color: #0E233A; }
+  .main.home {
+    height: initial;
+    max-height: 600px; }
+    .main.home img {
+      visibility: inherit;
+      position: relative; }
+    .main.home video {
+      display: none; }
+    .main.home .overlay img {
+      visibility: inherit;
+      position: relative; }
   .main .overlay {
     position: absolute;
     width: 100%;
@@ -6350,6 +6361,13 @@ section {
   position: relative; }
   section.about-us .image {
     margin-bottom: 1rem; }
+  section.terms .container p {
+    margin-bottom: 1rem;
+    width: 100%; }
+  section.terms .container .row {
+    margin-bottom: 2rem; }
+  section.terms .container h3 {
+    margin-bottom: 2rem; }
   section.portfolios, section.news-items {
     padding: 4rem 0; }
     section.portfolios .role img, section.news-items .role img {
@@ -6373,7 +6391,7 @@ section {
       border-radius: 5px;
       margin: 0 auto; }
   section .col-sm-12 {
-    margin-bottom: 2rem; }
+    margin-bottom: 6rem; }
   section .container p, section .container li, section .container span, section .container textarea {
     font-weight: 300;
     line-height: 34px; }
@@ -6619,8 +6637,21 @@ h1 {
 @media (min-width: 768px) {
   .main {
     padding: 0; }
+    .main.home {
+      height: initial; }
+      .main.home img {
+        visibility: hidden;
+        position: absolute; }
+      .main.home .overlay img {
+        visibility: inherit;
+        position: relative; }
+      .main.home video {
+        display: inherit;
+        margin: -200px 0 0 0; }
   section .container p {
-    margin-bottom: 4rem; } }
+    margin-bottom: 4rem; }
+  section .col-sm-12 {
+    margin-bottom: 2rem; } }
 
 @media (min-width: 992px) {
   .contact-us .container h3 {
