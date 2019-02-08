@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <title>Allerton Group</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+         <!-- Include external CSS. -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+
+        <!-- Include Editor style. -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css">
+
+    </head>
+    <body>
+	  	<div id="fake-nav"></div>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    Allerton Logo
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                       <li class="nav-item">
+                            <a class="nav-link" href="/about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#companies">Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#news">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/portfolio">Portfolio</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/#contact">Contact</a>
+                        </li>
+                        <% if (currentUser && currentUser.hash) { %>
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle user-icon" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= currentUser.username %></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/news/new">Add News Item</a>
+                                <a class="dropdown-item" href="/portfolio/new">Add Portfolio Item</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/logout">Logout</a>
+                            </div>
+                        </li>
+                          <% } else { %>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <% if(error && error.length > 0){ %>
+        <div class="alerts">
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+                <button type="button" class="close close-alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+        <div class="alerts">
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+                <button type="button" class="close close-alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        <% } %>

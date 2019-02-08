@@ -1,18 +1,38 @@
-var Job = require("../models/job");
-// var Comment = require("../models/comment");
+var News = require("../models/news");
+var Portfolio = require("../models/portfolio");
 
 // all the middleare goes here
 var middlewareObj = {};
 
-middlewareObj.checkJobOwnership = function(req, res, next) {
+middlewareObj.checkNOwnership = function(model, req, res, next) {
  if(req.isAuthenticated()){
-        Job.findById(req.params.id, function(err, foundJob){
+        News.findById(req.params.id, function(err, foundItem){
            if(err){
-               req.flash("error", "Job not found");
+               req.flash("error", "item not found");
                res.redirect("back");
            }  else {
-               // does user own the campground?
-            if(foundJob.author.id.equals(req.user._id)) {
+            if(foundItem.author.id.equals(req.user._id)) {
+                next();
+            } else {
+                req.flash("error", "You don't have permission to do that");
+                res.redirect("back");
+            }
+           }
+        });
+    } else {
+        req.flash("error", "You need to be logged in to do that");
+        res.redirect("back");
+    }
+}
+
+middlewareObj.checkPOwnership = function(model, req, res, next) {
+ if(req.isAuthenticated()){
+        Portfolio.findById(req.params.id, function(err, foundItem){
+           if(err){
+               req.flash("error", "item not found");
+               res.redirect("back");
+           }  else {
+            if(foundItem.author.id.equals(req.user._id)) {
                 next();
             } else {
                 req.flash("error", "You don't have permission to do that");

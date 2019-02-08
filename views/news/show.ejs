@@ -1,0 +1,52 @@
+<% include ../full-partials/header %>
+    <section class="hero news-heading full-width animated fadeIn">
+        <img src="https://allerton.s3.amazonaws.com/<%= job.image1 %>" alt="<%=job.title%>">
+        <div class="container">
+            <div class="row">
+                <div class="user-controls">
+                    <% if (currentUser && job.author.id.equals(currentUser._id)) { %>
+                        <a class="btn btn-xs btn-warning" href="/news/<%= job._id %>/edit">Edit</a>
+                        <form id="delete-form" action="/news/<%= job._id%>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger">Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="individual-job" class="individual-job">
+        <div class="container">
+            <div class="row">
+                <h3><%=job.title%></h3>
+                <div class="description">
+                    <%- job.description %>
+                </div>
+                <p>
+                    <em>Submitted By <%= job.author.username %></em>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="news-items">
+        <div class="container">
+            <h2>More News</h2>
+            <div class="row">
+                <% jobs.slice(-6).reverse().forEach(function(item){ %>
+                    <% if(item.id != job.id) {%>
+                        <div class="col-sm-12 col-md-3 role">
+                            <div class="image">
+                                  <img src="https://allerton.s3.amazonaws.com/<%= item.image1 %>">
+                             </div>
+                            <h3><%= item.title %></h3>
+                            <%- item.description %>
+                            <div class="cta">
+                                <a href="/news/<%= item._id %>" clas="btn">View more</a>
+                            </div>
+                        </div>
+                    <% } %>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+<% include ../full-partials/contact %>
+<% include ../full-partials/footer %>

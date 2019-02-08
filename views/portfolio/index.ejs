@@ -1,0 +1,31 @@
+<% include ../full-partials/header %>
+<section class="main portfolios">
+  <h1>Allerton Group</h1>
+  <div class="container">
+    <div class="row">
+      <h3>Portfolios</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ornare placerat. Integer blandit sit amet lorem a iaculis. Aliquam commodo est quis metus convallis, non ullamcorper ex vehicula. Vivamus auctor vulputate semper. Sed id nibh ornare ipsum ullamcorper maximus quis non mi. Phasellus sollicitudin metus eget enim ultricies convallis.</p>
+    </div>
+    <div class="row">
+      <% portfolios.reverse().slice(-18).forEach(function(portfolio){ %>
+      <div class="col-sm-6 col-md-3 role">
+        <div class="image">
+          <img src="https://allerton.s3.amazonaws.com/<%= portfolio.image %>" />
+        </div>
+        <h3><%= portfolio.title %></h3>
+        <%- portfolio.description %>
+        <div class="user-controls">
+          <% if (currentUser && portfolio.author.id.equals(currentUser._id)) { %>
+          <a class="btn btn-warning" href="/portfolio/<%= portfolio._id %>/edit">Edit</a>
+          <form id="delete-form" action="/portfolio/<%= portfolio._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+          <% } %>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+<% include ../full-partials/contact %>
+<% include ../full-partials/footer %>
